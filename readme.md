@@ -22,8 +22,24 @@ Ensure that the following software is installed on your computer:
 1. Launch Visual Studio Code (VS Code).
 2. Open the extracted folder in VS Code.
 
-### 4. Start the Python Backend
+### 4. Pre-Installation for Laravel
 1. Open a terminal in VS Code.
+2. Navigate to the `Web` directory by running:
+   ```bash
+   cd Web
+   ```
+3. Install the required dependencies:
+   ```bash
+   composer update
+   npm install
+   ```
+4. Run the database migration:
+   ```bash
+   php artisan migrate
+   ```
+
+### 5. Start the Python Backend
+1. Open another terminal in VS Code.
 2. Navigate to the `Model` directory by running:
    ```bash
    cd Model
@@ -34,19 +50,8 @@ Ensure that the following software is installed on your computer:
    ```
 4. Leave this terminal open and running.
 
-### 5. Migrate the Database
-1. Open another terminal in VS Code.
-2. Navigate to the `Web` directory by running:
-   ```bash
-   cd Web
-   ```
-3. Run the migration command to set up the database tables:
-   ```bash
-   php artisan migrate
-   ```
-
 ### 6. Start the Laravel Development Server
-1. In the same terminal as step 5, start the Laravel development server by running:
+1. In the terminal for the `Web` directory, start the Laravel development server by running:
    ```bash
    php artisan serve
    ```
@@ -68,6 +73,6 @@ Ensure that the following software is installed on your computer:
 2. Navigate to the URL displayed in the terminal from step 6 (e.g., `http://127.0.0.1:8000/`).
 
 ## Notes
-- Do not close the terminal running `python app.py` in step 4.
+- Do not close the terminal running `python app.py` in step 5.
 - Ensure all services are running properly before accessing the application in your browser.
 
